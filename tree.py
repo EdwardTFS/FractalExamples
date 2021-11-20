@@ -14,7 +14,8 @@ def build_tree(t, branch_length, shorten_by, angle):
 
 tree = turtle.Turtle()
 tree.hideturtle()
+tree.speed(0)
 tree.setheading(90)
 tree.color('green')
-build_tree(tree, 50, 5, 30)
+build_tree(tree, 50, 5, 40)
 turtle.mainloop()
