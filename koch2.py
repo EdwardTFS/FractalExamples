@@ -1,4 +1,7 @@
 import turtle
+import time
+
+start_time = time.time()
 
 def koch_fract(turtle, divis, size):
     if divis == 0:
@@ -16,5 +19,5 @@ t.speed(0)
 for i in range(3):
     koch_fract(t, 5, 300.0)
     t.left(-120)
-
+print("--- %s seconds ---" % (time.time() - start_time))  
 turtle.mainloop()

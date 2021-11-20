@@ -1,4 +1,8 @@
 import turtle
+import time
+
+start_time = time.time()
+
 MINIMUM_BRANCH_LENGTH = 5
 
 def build_tree(t, branch_length, shorten_by, angle):
@@ -18,4 +22,5 @@ tree.speed(0)
 tree.setheading(90)
 tree.color('green')
 build_tree(tree, 50, 5, 40)
+print("--- %s seconds ---" % (time.time() - start_time))  
 turtle.mainloop()

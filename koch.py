@@ -1,4 +1,8 @@
 import turtle
+import time
+
+start_time = time.time()
+
 def koch_curve(t, iterations, length, shortening_factor, angle):
   if iterations == 0:
     t.forward(length)
@@ -18,4 +22,5 @@ t.speed(0)
 for i in range(3):
   koch_curve(t, 4, 200, 3, 60)
   t.right(120)
+print("--- %s seconds ---" % (time.time() - start_time))  
 turtle.mainloop()

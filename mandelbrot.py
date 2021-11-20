@@ -7,11 +7,14 @@ By: it's literally monique
 # import libraries needed for program
 import numpy as np
 import matplotlib.pyplot as plt
-  
+import time
+
+start_time = time.time()
+
 # initialize rows, columns and iterations
-rows = 1000
-cols = 1000
-iterations = 150
+rows = 2000
+cols = 2000
+iterations = 250
 
 # function that will calculate the specific values in the mandelbrot set
 def mandelbrot(c, z):
@@ -43,7 +46,8 @@ y = np.linspace(-1, 1, cols)
 m = mandelbrot_set(x, y)
 
 # show the set (best colors: binary, hot, bone, magma)
-plt.imshow(m.T, cmap = "magma")
+plt.imshow(m.T, cmap = "hot")
 plt.axis("off")
 #plt.savefig('mandelbrot_set.png', dpi=300, bbox_inches='tight')
+print("--- %s seconds ---" % (time.time() - start_time))  
 plt.show()
